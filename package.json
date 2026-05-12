@@ -1,0 +1,27 @@
+{
+  "name": "mobile-coffee-app",
+  "version": "1.0.0",
+  "description": "Mantau Kopi monorepo for frontend React PWA and backend Node.js API",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix apps/backend\" \"npm run dev --prefix apps/frontend\"",
+    "dev:backend": "npm run dev --prefix apps/backend",
+    "dev:frontend": "npm run dev --prefix apps/frontend",
+    "build": "npm run build --prefix apps/frontend",
+    "start:backend": "npm run start --prefix apps/backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnicornNinja-code/mobile-coffee-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnicornNinja-code/mobile-coffee-app/issues"
+  },
+  "homepage": "https://github.com/UnicornNinja-code/mobile-coffee-app#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

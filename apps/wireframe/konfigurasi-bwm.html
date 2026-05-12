@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe Konfigurasi BWM - Mantau Kopi</title>
+  <link rel="stylesheet" href="./academic.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Wireframe Akademik</p>
+      <h1>Konfigurasi BWM dan Parameter SPK</h1>
+      <p class="lede">Input kriteria terbaik-terburuk, matriks perbandingan, hasil bobot, matriks keramaian, dan sensitivitas cuaca.</p>
+    </div>
+    <nav class="hero-nav">
+      <a href="./index.html">Kembali ke Induk</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <article class="screen app-screen">
+      <aside class="sidebar">
+        <div class="brand-chip">SPV PANEL</div>
+        <ul class="nav-list">
+          <li>Dashboard</li>
+          <li class="active">Konfigurasi BWM</li>
+          <li>Matriks Keramaian</li>
+          <li>Sensitivitas Cuaca</li>
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="topbar">
+          <div class="breadcrumb">SPK / Best Worst Method</div>
+          <div class="badge">CR target &lt; threshold</div>
+        </div>
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-title">Input BWM</div>
+            <div class="row split">
+              <div>
+                <label>Best Criterion</label>
+                <div class="select-box">C4 Keramaian</div>
+              </div>
+              <div>
+                <label>Worst Criterion</label>
+                <div class="select-box">C3 Jarak</div>
+              </div>
+            </div>
+            <div class="subhead">Best-to-Others</div>
+            <div class="matrix-grid five">
+              <div>3</div><div>4</div><div>7</div><div>1</div><div>2</div>
+            </div>
+            <div class="subhead">Others-to-Worst</div>
+            <div class="matrix-grid five">
+              <div>5</div><div>4</div><div>1</div><div>7</div><div>6</div>
+            </div>
+            <div class="row split">
+              <div class="button">Proses Bobot</div>
+              <div class="button ghost">Simpan Draft</div>
+            </div>
+          </div>
+          <div class="stack">
+            <div class="panel">
+              <div class="panel-title">Hasil Bobot</div>
+              <div class="table-lines"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-title">Matriks Keramaian</div>
+              <div class="matrix-table seven-by-five"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-title">Sensitivitas Cuaca</div>
+              <div class="table-lines compact"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

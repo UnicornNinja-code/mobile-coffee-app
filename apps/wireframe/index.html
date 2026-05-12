@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe Mantau Kopi</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Wireframe Sistem Pendukung Keputusan</p>
+      <h1>Mantau Kopi: Visualisasi Antarmuka Supervisor dan Rider</h1>
+      <p class="lede">
+        Kumpulan wireframe HTML/CSS untuk mendukung Bab III bagian perancangan antarmuka.
+        Halaman ini menampilkan seluruh layar utama aplikasi dalam satu dokumen yang mudah ditinjau.
+      </p>
+    </div>
+    <nav class="hero-nav">
+      <a href="#login">Login</a>
+      <a href="#supervisor">Supervisor</a>
+      <a href="#rider">Rider</a>
+      <a href="#reports">Laporan</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="overview">
+      <article class="overview-card">
+        <h2>Ruang Lingkup Layar</h2>
+        <ul>
+          <li>Login pengguna</li>
+          <li>Dashboard supervisor</li>
+          <li>Zona operasional dan POI</li>
+          <li>Konfigurasi BWM, matriks keramaian, dan sensitivitas cuaca</li>
+          <li>Monitoring rider dan laporan evaluasi</li>
+          <li>Rekomendasi zona, detail zona, dan log penjualan rider</li>
+        </ul>
+      </article>
+      <article class="overview-card">
+        <h2>Catatan Visual</h2>
+        <ul>
+          <li>Low-fidelity dengan garis tegas dan label jelas</li>
+          <li>Layout disiapkan untuk desktop dan mobile-first</li>
+          <li>Komponen peta, tabel, kartu, dan panel navigasi divisualkan</li>
+          <li>Dapat dijadikan acuan wireframe atau lampiran rancangan</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="gallery">
+      <a class="thumb" href="#login">
+        <span>01</span>
+        <strong>Login</strong>
+        <small>Autentikasi supervisor dan rider</small>
+      </a>
+      <a class="thumb" href="#dashboard-spv">
+        <span>02</span>
+        <strong>Dashboard Supervisor</strong>
+        <small>Ringkasan zona, rider, dan penjualan</small>
+      </a>
+      <a class="thumb" href="#zones">
+        <span>03</span>
+        <strong>Zona Operasional</strong>
+        <small>Peta polygon dan daftar zona</small>
+      </a>
+      <a class="thumb" href="#bwm">
+        <span>04</span>
+        <strong>Konfigurasi BWM</strong>
+        <small>Input best-worst dan hasil bobot</small>
+      </a>
+      <a class="thumb" href="#rider-map">
+        <span>05</span>
+        <strong>Rekomendasi Rider</strong>
+        <small>Peta zona, ranking, dan detail</small>
+      </a>
+      <a class="thumb" href="#reports">
+        <span>06</span>
+        <strong>Laporan</strong>
+        <small>Evaluasi hasil rekomendasi</small>
+      </a>
+    </section>
+
+    <section class="overview">
+      <article class="overview-card">
+        <h2>File Terpisah Siap Screenshot</h2>
+        <ul>
+          <li><a href="./login.html">login.html</a></li>
+          <li><a href="./dashboard-supervisor.html">dashboard-supervisor.html</a></li>
+          <li><a href="./zona-operasional.html">zona-operasional.html</a></li>
+          <li><a href="./konfigurasi-bwm.html">konfigurasi-bwm.html</a></li>
+          <li><a href="./monitoring-rider.html">monitoring-rider.html</a></li>
+          <li><a href="./rekomendasi-rider.html">rekomendasi-rider.html</a></li>
+          <li><a href="./detail-zona.html">detail-zona.html</a></li>
+          <li><a href="./log-penjualan.html">log-penjualan.html</a></li>
+          <li><a href="./laporan.html">laporan.html</a></li>
+        </ul>
+      </article>
+      <article class="overview-card">
+        <h2>Mode Akademik</h2>
+        <ul>
+          <li>Semua file terpisah memakai <code>academic.css</code></li>
+          <li>Tampilan hitam-putih lebih cocok untuk skripsi dan print</li>
+          <li>Bisa dipakai langsung untuk screenshot per gambar</li>
+          <li>Versi induk tetap tersedia sebagai galeri lengkap</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="login" class="wireframe-block">
+      <div class="section-head">
+        <p class="kicker">Layar 1</p>
+        <h2>Halaman Login</h2>
+      </div>
+      <div class="screen login-screen">
+        <aside class="login-aside">
+          <div class="brand-chip">MANTAU KOPI</div>
+          <h3>Pilih masuk sebagai pengguna terdaftar</h3>
+          <ul class="mini-list">
+            <li>Supervisor mengelola zona dan parameter SPK</li>
+            <li>Rider menerima rekomendasi dan mencatat penjualan</li>
+            <li>Sesi pengguna dibedakan berdasarkan peran</li>
+          </ul>
+        </aside>
+        <div class="login-card">
+          <div class="placeholder-line w-50"></div>
+          <div class="placeholder-line w-90"></div>
+          <label>Email</label>
+          <div class="input-box"></div>
+          <label>Kata Sandi</label>
+          <div class="input-box"></div>
+          <div class="row split">
+            <div class="toggle-pill">Supervisor</div>
+            <div class="toggle-pill muted">Rider</div>
+          </div>
+          <div class="button wide">Masuk</div>
+          <div class="helper-note">Pesan validasi / lupa kata sandi</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="supervisor" class="wireframe-block">
+      <div class="section-head">
+        <p class="kicker">Supervisor Workspace</p>
+        <h2>Rangkaian Layar Utama Supervisor</h2>
+      </div>
+
+      <article id="dashboard-spv" class="screen app-screen">
+        <aside class="sidebar">
+          <div class="brand-chip">SPV PANEL</div>
+          <ul class="nav-list">
+            <li class="active">Dashboard</li>
+            <li>Zona Operasional</li>
+            <li>POI</li>
+            <li>Konfigurasi BWM</li>
+            <li>Matriks Keramaian</li>
+            <li>Sensitivitas Cuaca</li>
+            <li>Monitoring Rider</li>
+            <li>Laporan</li>
+          </ul>
+        </aside>
+        <div class="content">
+          <div class="topbar">
+            <div class="search-box"></div>
+            <div class="user-badge">Supervisor Operasional</div>
+          </div>
+          <h3>Dashboard Supervisor</h3>
+          <div class="metric-grid">
+            <div class="metric-card"><span>Zona Aktif</span><strong>12</strong></div>
+            <div class="metric-card"><span>Rider Aktif</span><strong>6</strong></div>
+            <div class="metric-card"><span>POI Tersinkron</span><strong>284</strong></div>
+            <div class="metric-card"><span>Log Hari Ini</span><strong>27</strong></div>
+          </div>
+          <div class="two-col">
+            <div class="panel">
+              <div class="panel-title">Peta Ringkas Operasional</div>
+              <div class="map-placeholder">
+                <div class="map-chip chip-a"></div>
+                <div class="map-chip chip-b"></div>
+                <div class="map-chip chip-c"></div>
+                <div class="map-route"></div>
+              </div>
+            </div>
+            <div class="stack">
+              <div class="panel slim">
+                <div class="panel-title">Status Bobot BWM</div>
+                <div class="table-lines compact"></div>
+              </div>
+              <div class="panel slim">
+                <div class="panel-title">Ringkasan Evaluasi Zona</div>
+                <div class="chart-placeholder bars">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="zones" class="screen app-screen">
+        <aside class="sidebar">
+          <div class="brand-chip">SPV PANEL</div>
+          <ul class="nav-list">
+            <li>Dashboard</li>
+            <li class="active">Zona Operasional</li>
+            <li>POI</li>
+            <li>Konfigurasi BWM</li>
+          </ul>
+        </aside>
+        <div class="content">
+          <div class="topbar">
+            <div class="breadcrumb">Zona Operasional / Polygon &amp; POI</div>
+            <div class="button small">Tambah Zona</div>
+          </div>
+          <div class="three-col">
+            <div class="panel large-map">
+              <div class="panel-title">Leaflet Map + Drawing Tools</div>
+              <div class="map-placeholder zoning">
+                <div class="zone-shape zone-1"></div>
+                <div class="zone-shape zone-2"></div>
+                <div class="zone-shape zone-3"></div>
+                <div class="poi-dot d1"></div>
+                <div class="poi-dot d2"></div>
+                <div class="poi-dot d3"></div>
+                <div class="poi-dot d4"></div>
+                <div class="poi-dot d5"></div>
+              </div>
+            </div>
+            <div class="stack">
+              <div class="panel">
+                <div class="panel-title">Form Zona</div>
+                <div class="input-box"></div>
+                <div class="input-box tall"></div>
+                <div class="row split">
+                  <div class="button">Simpan</div>
+                  <div class="button ghost">Reset</div>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">Sinkronisasi POI</div>
+                <div class="row split">
+                  <div class="tag">Sekolah</div>
+                  <div class="tag">Kampus</div>
+                </div>
+                <div class="row split">
+                  <div class="tag">Taman</div>
+                  <div class="tag">Pabrik</div>
+                </div>
+                <div class="tag">Kantor</div>
+                <div class="button wide">Sync Overpass API</div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-title">Daftar Zona</div>
+              <div class="list-card">
+                <strong>Zona Kampus ITS</strong>
+                <small>12 POI • aktif</small>
+              </div>
+              <div class="list-card">
+                <strong>Zona SIER Rungkut</strong>
+                <small>8 POI • aktif</small>
+              </div>
+              <div class="list-card">
+                <strong>Zona Taman Bungkul</strong>
+                <small>3 POI • nonaktif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="bwm" class="screen app-screen">
+        <aside class="sidebar">
+          <div class="brand-chip">SPV PANEL</div>
+          <ul class="nav-list">
+            <li>Dashboard</li>
+            <li class="active">Konfigurasi BWM</li>
+            <li>Matriks Keramaian</li>
+            <li>Sensitivitas Cuaca</li>
+          </ul>
+        </aside>
+        <div class="content">
+          <div class="topbar">
+            <div class="breadcrumb">SPK / Best Worst Method</div>
+            <div class="badge">CR target &lt; threshold</div>
+          </div>
+          <div class="two-col">
+            <div class="panel">
+              <div class="panel-title">Input BWM</div>
+              <div class="row split">
+                <div>
+                  <label>Best Criterion</label>
+                  <div class="select-box">C4 Keramaian</div>
+                </div>
+                <div>
+                  <label>Worst Criterion</label>
+                  <div class="select-box">C3 Jarak</div>
+                </div>
+              </div>
+              <div class="subhead">Best-to-Others</div>
+              <div class="matrix-grid five">
+                <div>3</div><div>4</div><div>7</div><div>1</div><div>2</div>
+              </div>
+              <div class="subhead">Others-to-Worst</div>
+              <div class="matrix-grid five">
+                <div>5</div><div>4</div><div>1</div><div>7</div><div>6</div>
+              </div>
+              <div class="row split">
+                <div class="button">Proses Bobot</div>
+                <div class="button ghost">Simpan Draft</div>
+              </div>
+            </div>
+            <div class="stack">
+              <div class="panel">
+                <div class="panel-title">Hasil Bobot</div>
+                <div class="table-lines"></div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">Matriks Keramaian</div>
+                <div class="matrix-table seven-by-five"></div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">Sensitivitas Cuaca</div>
+                <div class="table-lines compact"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="monitoring" class="screen app-screen">
+        <aside class="sidebar">
+          <div class="brand-chip">SPV PANEL</div>
+          <ul class="nav-list">
+            <li>Dashboard</li>
+            <li class="active">Monitoring Rider</li>
+            <li>Laporan</li>
+          </ul>
+        </aside>
+        <div class="content">
+          <div class="topbar">
+            <div class="breadcrumb">Monitoring Rider / Real-time Map</div>
+            <div class="button small">Refresh</div>
+          </div>
+          <div class="two-col">
+            <div class="panel">
+              <div class="panel-title">Peta Posisi Rider</div>
+              <div class="map-placeholder">
+                <div class="zone-shape zone-1"></div>
+                <div class="zone-shape zone-2"></div>
+                <div class="rider-marker r1"></div>
+                <div class="rider-marker r2"></div>
+                <div class="rider-marker r3"></div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-title">Daftar Rider Aktif</div>
+              <div class="rider-card">
+                <strong>Rider A</strong>
+                <small>Zona Kampus ITS • aktif</small>
+              </div>
+              <div class="rider-card">
+                <strong>Rider B</strong>
+                <small>Zona SIER • istirahat</small>
+              </div>
+              <div class="rider-card">
+                <strong>Rider C</strong>
+                <small>Zona HR Muhammad • aktif</small>
+              </div>
+              <div class="panel-title section-gap">Ringkasan Log Penjualan</div>
+              <div class="table-lines compact"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="rider" class="wireframe-block">
+      <div class="section-head">
+        <p class="kicker">Rider Workspace</p>
+        <h2>Rangkaian Layar Utama Rider</h2>
+      </div>
+
+      <article id="rider-map" class="screen mobile-screen">
+        <div class="mobile-topbar">
+          <div class="dot-grid"></div>
+          <strong>Rekomendasi Zona</strong>
+          <div class="mobile-avatar"></div>
+        </div>
+        <div class="map-mobile">
+          <div class="zone-chip high">Zona A</div>
+          <div class="zone-chip medium">Zona B</div>
+          <div class="zone-chip low">Zona C</div>
+          <div class="rider-pin"></div>
+        </div>
+        <div class="bottom-sheet">
+          <div class="sheet-handle"></div>
+          <h3>Top 3 Rekomendasi</h3>
+          <div class="rank-card">
+            <div>
+              <strong>1. Zona Kampus ITS</strong>
+              <small>V = 0.887 • 12 POI</small>
+            </div>
+            <span class="status good">Tinggi</span>
+          </div>
+          <div class="rank-card">
+            <div>
+              <strong>2. Zona SIER Rungkut</strong>
+              <small>V = 0.560 • 8 POI</small>
+            </div>
+            <span class="status mid">Sedang</span>
+          </div>
+          <div class="rank-card">
+            <div>
+              <strong>3. Zona HR Muhammad</strong>
+              <small>V = 0.522 • 6 POI</small>
+            </div>
+            <span class="status mid">Sedang</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="screen phone-pair">
+        <div class="phone-frame">
+          <div class="mobile-topbar">
+            <div class="dot-grid"></div>
+            <strong>Detail Zona</strong>
+            <div class="mobile-avatar"></div>
+          </div>
+          <div class="mobile-content">
+            <div class="hero-card">
+              <strong>Zona Kampus ITS</strong>
+              <small>Skor TOPSIS 0.887</small>
+            </div>
+            <div class="stats-list">
+              <div><span>C1 Densitas POI</span><strong>12</strong></div>
+              <div><span>C2 Diversitas</span><strong>3</strong></div>
+              <div><span>C3 Jarak</span><strong>2400 m</strong></div>
+              <div><span>C4 Keramaian</span><strong>4.5</strong></div>
+              <div><span>C5 Cuaca</span><strong>86.0</strong></div>
+            </div>
+            <div class="weather-strip">
+              <span>Peluang hujan 30%</span>
+              <span>Kondisi aman</span>
+            </div>
+            <div class="button wide">Navigasi ke Zona</div>
+          </div>
+        </div>
+
+        <div class="phone-frame">
+          <div class="mobile-topbar">
+            <div class="dot-grid"></div>
+            <strong>Log Penjualan</strong>
+            <div class="mobile-avatar"></div>
+          </div>
+          <div class="mobile-content">
+            <label>Zona Tempat Berjualan</label>
+            <div class="select-box">Zona Kampus ITS</div>
+            <label>Jumlah Cup Terjual</label>
+            <div class="input-box"></div>
+            <label>Catatan</label>
+            <div class="input-box tall"></div>
+            <div class="button wide">Simpan Log</div>
+            <div class="subhead section-gap">Riwayat Hari Ini</div>
+            <div class="log-item">
+              <strong>10:15 • 9 cup</strong>
+              <small>Zona Kampus ITS</small>
+            </div>
+            <div class="log-item">
+              <strong>13:40 • 6 cup</strong>
+              <small>Zona SIER Rungkut</small>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="reports" class="wireframe-block">
+      <div class="section-head">
+        <p class="kicker">Layar 12</p>
+        <h2>Halaman Laporan dan Evaluasi</h2>
+      </div>
+      <article class="screen app-screen report-screen">
+        <aside class="sidebar">
+          <div class="brand-chip">SPV PANEL</div>
+          <ul class="nav-list">
+            <li>Dashboard</li>
+            <li class="active">Laporan</li>
+          </ul>
+        </aside>
+        <div class="content">
+          <div class="topbar">
+            <div class="breadcrumb">Laporan / Evaluasi Zona dan Penjualan</div>
+            <div class="row split compact-actions">
+              <div class="button small ghost">Filter</div>
+              <div class="button small">Unduh</div>
+            </div>
+          </div>
+          <div class="metric-grid">
+            <div class="metric-card"><span>Zona Paling Produktif</span><strong>ITS</strong></div>
+            <div class="metric-card"><span>Total Cup</span><strong>132</strong></div>
+            <div class="metric-card"><span>Akurasi Rekomendasi</span><strong>78%</strong></div>
+            <div class="metric-card"><span>Hari Hujan</span><strong>4</strong></div>
+          </div>
+          <div class="two-col">
+            <div class="panel">
+              <div class="panel-title">Perbandingan Ranking vs Penjualan</div>
+              <div class="chart-placeholder bars tall">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-title">Tabel Evaluasi</div>
+              <div class="table-lines full"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

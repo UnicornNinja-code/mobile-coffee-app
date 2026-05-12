@@ -1,0 +1,138 @@
+@import url("./styles.css");
+
+:root {
+  --bg: #f7f7f7;
+  --card: #ffffff;
+  --ink: #111111;
+  --muted: #505050;
+  --line: #c9c9c9;
+  --line-strong: #5c5c5c;
+  --accent: #2f2f2f;
+  --accent-soft: #ededed;
+  --good: #dcdcdc;
+  --mid: #e8e8e8;
+  --low: #f2f2f2;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background: linear-gradient(180deg, #f7f7f7 0, #ffffff 100%);
+}
+
+.hero,
+.overview-card,
+.screen,
+.thumb,
+.sidebar,
+.login-aside,
+.login-card,
+.panel,
+.phone-frame,
+.bottom-sheet,
+.metric-card,
+.list-card,
+.rider-card,
+.rank-card,
+.hero-card,
+.log-item {
+  box-shadow: none;
+}
+
+.hero-nav a,
+.thumb,
+.button,
+.brand-chip,
+.badge,
+.tag,
+.toggle-pill,
+.status,
+.user-badge,
+.nav-list li,
+.stats-list div,
+.weather-strip {
+  background: #ffffff;
+  color: #111111;
+}
+
+.button {
+  border-color: #111111;
+  background: #111111;
+  color: #ffffff;
+}
+
+.button.ghost {
+  background: #ffffff;
+  color: #111111;
+}
+
+.login-aside {
+  background: linear-gradient(180deg, #f0f0f0, #ffffff);
+}
+
+.map-placeholder,
+.map-mobile,
+.chart-placeholder,
+.table-lines,
+.matrix-table {
+  background:
+    linear-gradient(135deg, #f5f5f5, #ffffff),
+    repeating-linear-gradient(0deg, transparent 0 28px, rgba(0, 0, 0, 0.08) 28px 29px),
+    repeating-linear-gradient(90deg, transparent 0 28px, rgba(0, 0, 0, 0.08) 28px 29px);
+}
+
+.chart-placeholder span,
+.map-chip,
+.poi-dot,
+.rider-marker,
+.rider-pin,
+.zone-chip,
+.zone-shape {
+  filter: grayscale(100%);
+}
+
+.zone-shape {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.hero-nav a,
+.thumb,
+.metric-card,
+.rank-card,
+.list-card,
+.rider-card,
+.hero-card,
+.log-item,
+.stats-list div {
+  border-color: #5c5c5c;
+}
+
+.print-note {
+  border: 1px dashed #5c5c5c;
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: #fafafa;
+  color: #4a4a4a;
+  margin-top: 12px;
+}
+
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .hero-nav,
+  .gallery {
+    display: none;
+  }
+
+  .page-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .screen,
+  .overview-card {
+    break-inside: avoid;
+    margin-bottom: 12px;
+  }
+}
